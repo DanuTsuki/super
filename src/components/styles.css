@@ -1,34 +1,32 @@
-/* styles.css */
-
 .form-container {
-    background-color: #ffffff; /* Fondo blanco para el formulario */
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-container .MuiTextField-root {
-    margin-bottom: 16px; /* Espaciado entre campos */
+    margin-bottom: 16px;
 }
 
 .form-container .MuiButton-root {
-    margin-top: 16px; /* Espaciado arriba del botón */
+    margin-top: 16px;
 }
 
-/* Estilo para los botones en el formulario */
+
 .MuiButton-containedPrimary {
-    background-color: #4e54c8; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
+    background-color: #4e54c8; 
+    color: #ffffff; 
 }
 
 .MuiButton-containedPrimary:hover {
-    background-color: #3b4a8d; /* Color del botón al pasar el ratón */
+    background-color: #3b4a8d; 
 }
 
-/* Estilo para el botón deshabilitado */
+
 .MuiButton-disabled {
-  background-color: #d0d0d0; /* Color de fondo cuando el botón está deshabilitado */
-  color: #a0a0a0; /* Color del texto cuando el botón está deshabilitado */
+  background-color: #d0d0d0; 
+  color: #a0a0a0;
 }
 
 

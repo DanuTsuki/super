@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, MenuItem, Grid, Box } from '@mui/material';
 import { toast } from 'react-toastify';
-import './styles.css'; // Asegúrate de que el archivo de estilos esté importado
+import './styles.css'; 
 
 const Form = ({ addProduct, editProduct, selectedProduct }) => {
   const [product, setProduct] = useState({
@@ -36,7 +36,6 @@ const Form = ({ addProduct, editProduct, selectedProduct }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === 'expiryDate') {
-      // Verifica si la fecha de vencimiento es válida
       const today = new Date().toISOString().split('T')[0];
       if (value < today) {
         toast.error('La fecha de vencimiento no puede ser anterior a la fecha actual');
@@ -99,7 +98,7 @@ const Form = ({ addProduct, editProduct, selectedProduct }) => {
             onChange={handleChange} 
             fullWidth 
             variant="outlined" 
-            disabled={editing} // Deshabilita el campo si está en modo de edición
+            disabled={editing}
           />
         </Grid>
         <Grid item xs={12}>
@@ -188,7 +187,7 @@ const Form = ({ addProduct, editProduct, selectedProduct }) => {
                 variant="contained" 
                 color="primary"
                 className={`MuiButton-containedPrimary ${!isFormValid ? 'MuiButton-disabled' : ''}`}
-                disabled={!isFormValid} // Deshabilita el botón si el formulario no es válido
+                disabled={!isFormValid}
               >
                 {editing ? 'Editar Producto' : 'Agregar Producto'}
               </Button>

@@ -3,9 +3,9 @@ import Form from './components/Form';
 import ProductTable from './components/Table';
 import { Container, Grid, Typography } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos de react-toastify
-import { confirmAlert } from 'react-confirm-alert'; // Importa react-confirm-alert
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Importa los estilos de react-confirm-alert
+import 'react-toastify/dist/ReactToastify.css';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -35,7 +35,7 @@ const App = () => {
     );
     setProducts(updatedProducts);
     localStorage.setItem('products', JSON.stringify(updatedProducts));
-    setSelectedProduct(null); // Reset selected product after editing
+    setSelectedProduct(null);
     toast.success('Producto editado exitosamente');
   };
 
@@ -50,7 +50,7 @@ const App = () => {
             const updatedProducts = products.filter(product => product.id !== id);
             setProducts(updatedProducts);
             localStorage.setItem('products', JSON.stringify(updatedProducts));
-            setSelectedProduct(null); // Reset selected product after deletion
+            setSelectedProduct(null); 
             toast.error('Producto eliminado exitosamente');
           }
         },
@@ -58,7 +58,7 @@ const App = () => {
           label: 'No'
         }
       ],
-      closeOnClickOutside: true, // Permitir cerrar el diálogo al hacer clic fuera de él
+      closeOnClickOutside: true, 
     });
   };
 
@@ -81,7 +81,7 @@ const App = () => {
           />
         </Grid>
       </Grid>
-      <ToastContainer /> {/* Agrega el contenedor de notificaciones */}
+      <ToastContainer />
     </Container>
   );
 };

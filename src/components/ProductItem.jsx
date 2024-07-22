@@ -2,9 +2,8 @@ import React from 'react';
 import { TableRow, TableCell, Button } from '@mui/material';
 
 const ProductItem = ({ product, editProduct, deleteProduct }) => {
-  // Verificar si el producto está definido
   if (!product) {
-    return null; // No renderizar nada si el producto es undefined
+    return null;
   }
 
   return (
